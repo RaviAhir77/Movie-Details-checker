@@ -1,11 +1,17 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import MVPage from './view/MVPage';
 import TitlePage from './view/TitlePage';
 
 function App() {
+  const [movieId,setMovieId] = useState('')
+
+  const shareId = (id) => {
+    setMovieId(id)
+  }
   return (
     <div className="App">
-        <TitlePage/>
+        <MVPage Id={movieId}/>
+        <TitlePage onViewDetails={shareId} />        
     </div>
   );
 }

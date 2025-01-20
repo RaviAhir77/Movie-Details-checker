@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ApiHandler } from '../component/ApiHandler';
 
-const MVPage = () => {
-    const [mName, setMName] = useState('');
+const MVPage = ({Id}) => {
     const [details, setDetails] = useState(null); 
     const [error, setError] = useState('');
     const [isSearchDetails, setIsSearchDetails] = useState(false);
 
-    const searchHandler = async () => {
+    const searchHandler = async (id) => {
         try {
             setError('');
-            const data = await ApiHandler(mName);
+            const data = await ApiHandler(id);
 
             if (data.Response === 'True') {
                 setDetails(data); 
@@ -27,20 +26,15 @@ const MVPage = () => {
         }
     };
 
+    useEffect(() => {
+        if(Id){
+            searchHandler(Id)
+        }
+    },[Id])
+
     return (
         <div className='MVPage'>
-            <h1>Find Movie Details by Entering Name</h1>
-
-            <div className="movieSearch">
-                <input
-                    type="text"
-                    value={mName}
-                    onChange={(e) => setMName(e.target.value)}
-                    placeholder="Enter Movie Name ..."
-                />
-                <button onClick={searchHandler}>Search</button>
-            </div>
-
+            
             {error && <h2>There is an error: {error}</h2>}
 
             <div className="details-display">

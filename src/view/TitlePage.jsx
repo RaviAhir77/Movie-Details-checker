@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ApiTitle } from '../component/ApiTitle';
-const TitlePage = () => {
+const TitlePage = ({onViewDetails}) => {
 
     const [title,setTitle] = useState('');
     const [details,setDetails] = useState([]);
@@ -41,6 +41,7 @@ const TitlePage = () => {
                     <div className='INFO'>
                         <h2>{detail.Title}</h2>
                         <p>Year : {detail.Year}</p>
+                        <button onClick={() => onViewDetails(detail.imdbID)}>View Details</button>
                     </div>
                 </div>
             ))}
