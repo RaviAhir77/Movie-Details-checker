@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import MVPage from './view/MVPage';
-import TitlePage from './view/TitlePage';
+import FindById from './view/FindByID';
+import FindByTitle from './view/FindByTitle';
 
 function App() {
   const [movieId,setMovieId] = useState('')
@@ -8,10 +8,11 @@ function App() {
   const shareId = (id) => {
     setMovieId(id)
   }
+  
   return (
     <div className="App">
-        <MVPage Id={movieId}/>
-        <TitlePage onViewDetails={shareId} />        
+        <FindById Id={movieId}/>
+        <FindByTitle onViewDetails={shareId} />        
     </div>
   );
 }

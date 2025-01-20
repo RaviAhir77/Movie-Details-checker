@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { ApiTitle } from '../component/ApiTitle';
-const TitlePage = ({onViewDetails}) => {
+import '../css/FindByTitle.css'
+
+const FindByTitle = ({onViewDetails}) => {
 
     const [title,setTitle] = useState('');
     const [details,setDetails] = useState([]);
@@ -18,7 +20,7 @@ const TitlePage = ({onViewDetails}) => {
     }
   return (
     <div className='TitlePage'>
-        <h1>Search movie datails with name</h1>
+        <h1>Search movie datails</h1>
 
         <div className="input-section">
             <input type="text" 
@@ -50,4 +52,4 @@ const TitlePage = ({onViewDetails}) => {
   )
 }
 
-export default TitlePage
+export default FindByTitle;

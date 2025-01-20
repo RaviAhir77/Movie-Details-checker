@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.MVPage{
+    border-bottom: 2px solid black;
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.MVPage .error-displays{
+    margin: 15px auto;
+    text-align: center;
+}
+
+.details-display .single-detail{
+    max-width: 1024px;
+    margin: 20px auto;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    border-radius: 12px;
+    box-shadow: 0 2px 15px black;
+}
+
+.single-detail .MPoster{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-right: 1px solid #0000006e;
+}
+
+.single-detail .MAll-info{
+    display: flex;
+    margin: 10px;
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+}
+.MAll-info .title-rating{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.326);
+}
+.MAll-info .title-rating h1{
+    margin: 5px;
+    letter-spacing: 0.05rem;
+}
+.MAll-info .Movie-rating-section{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.323);
+    padding: 8px 0;
+}
+.MAll-info .Movie-rating-section h2{
+    color: #1f1fe7;
+}
+
+.MAll-info .Movie-rating-section .rating-three{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.rating-three .rat,
+.Mrelese-info .info-release p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 4px;
+    height: 55px;
+    margin-right:8px;
+    border: 1px solid rgba(0, 0, 0, 0.31);
+    box-shadow: 0 0px 8px #00000031;
+    background-color: rgba(70, 239, 254, 0.279);
+}
+
+.Mrelese-info{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.332);
+    padding: 10px 0;
+}
+
+.Mrelese-info h2,
+.Mcast h2{
+    margin-bottom: 10px;
+    color: #1f1fe7;
+}
+
+.Mrelese-info .info-release{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-cast strong{
+    color:#1f1fe7;
+}
+
+.info-cast p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border-radius: 4px;
+    height: 55px;
+    margin-right:8px;
+    border: 1px solid rgba(0, 0, 0, 0.31);
+    box-shadow: 0 0px 8px #00000031;
+    background-color: rgba(70, 239, 254, 0.279);
+}
+
+
+

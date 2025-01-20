@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+.TitlePage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.TitlePage h1{
+    position: relative;
+    margin: 10px 0;
+}
+
+.TitlePage h1::before{
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 75%;
+    border-bottom: 3px dotted black;
+}
+
+.input-section{
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+}
+
+.input-section input{
+    height: 40px;
+    width: 240px;
+    padding-left:10px;
+    font-family: "Space Grotesk", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.input-section button{
+    height: 40px;
+    width: 120px;
+    font-size: 1.2rem;
+    font-family: "Space Grotesk", serif;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.error-display{
+    font-size: 2rem;
+    margin: 10px 0;
+    letter-spacing: 0.05rem;
+}
+
+.display-response{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;   
+}
+
+.display-response .display-single{
+    display: flex;
+    width: 30%;
+    margin: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.362);
+    box-shadow: inset 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.display-response .display-single .IMG{
+    display: flex;
+    height: 280px;
+    width: auto;
+    padding: 10px 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.342);
+}
+
+.display-single .INFO{
+    display: flex;
+    margin: auto;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.display-single .INFO button{
+    height: 40px;
+    width: 80%;
+    cursor: pointer;
+}
+
+
+
